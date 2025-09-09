@@ -22,9 +22,6 @@ This project demonstrates how AI can support early detection of health condition
 - **Prediction Result Page**  
   ![Prediction Output Screenshot](images/frontend_output.png)  
 
-- **Risk Visualization Dashboard**  
-  ![Dashboard Screenshot](images/dashboard.png)  
-
 ---
 
 ## 🛠️ Tech Stack  
