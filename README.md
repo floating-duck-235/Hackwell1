@@ -28,7 +28,7 @@ This project demonstrates how AI can support early detection of health condition
 
 - **Frontend:** React.js, Tailwind CSS  
 - **Backend:** Python (FastAPI / Flask)  
-- **ML Models:** LightGBM, XGBoost, scikit-learn  
+- **ML Models:** Logistic Regression, Random Forest, scikit-learn  
 - **Deployment:** IBM Watsonx.ai, Watson Assistant (future integration)  
 
 ---
