@@ -7,16 +7,14 @@ This project demonstrates how AI can support early detection of health condition
 
 ## 🚀 Features  
 - 📊 Predicts risks for **diabetes, hypertension, heart failure, and kidney disease**  
-- 🧠 Uses **LightGBM / XGBoost** for high-performance classification  
+- 🧠 Uses **Random Forest and Logistic Regression** for high-performance classification  
 - ⚡ Trained on structured patient datasets with medical indicators  
-- 🌐 Frontend UI (React/Node.js) for patient input and live predictions  
+- 🌐 Frontend UI for patient input and live predictions  
 - 📈 Visualization of patient risk profile & health parameters  
 
 ---
 
 ## 📸 Project Snapshots  
-
-👉 Add your frontend images/screenshots here:  
 
 - **Patient Input Form (Frontend UI)**  
   ![Frontend Input Screenshot](images/frontend_input.png)  
@@ -35,19 +33,6 @@ This project demonstrates how AI can support early detection of health condition
 - **Backend:** Python (FastAPI / Flask)  
 - **ML Models:** LightGBM, XGBoost, scikit-learn  
 - **Deployment:** IBM Watsonx.ai, Watson Assistant (future integration)  
-
----
-
-## 📂 Project Structure  
-
-```
-├── data/                  # Patient dataset (synthetic or anonymized)  
-├── models/                # Trained ML models  
-├── backend/               # API for model inference  
-├── frontend/              # React UI  
-├── notebooks/             # Training & evaluation notebooks  
-└── README.md              # Project documentation  
-```
 
 ---
 
