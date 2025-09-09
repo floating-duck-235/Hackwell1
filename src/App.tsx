@@ -4,7 +4,7 @@ import { FileUploader } from './components/FileUploader';
 import { ResultsDisplay } from './components/ResultsDisplay';
 import { LoadingSpinner } from './components/LoadingSpinner';
 import { parseCSV, downloadCSV, PatientData } from './utils/csvParser';
-import { runPredictionModel, PredictionResult } from './services/modelService';
+import { predictWithModel, PredictionResult } from './services/modelService';
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -27,7 +27,7 @@ function App() {
       console.log(`Processing ${patientData.length} patients...`);
       
       // Run the prediction model
-      const predictions = await runPredictionModel(patientData);
+      const predictions = await predictWithModel(patientData);
       setResults(predictions);
       
     } catch (err) {

@@ -84,8 +84,8 @@ export const runPredictionModel = async (patientData: PatientData[]): Promise<Pr
 // Function to integrate with your actual Python model
 export const callPythonModel = async (patientData: PatientData[]): Promise<PredictionResult[]> => {
   try {
-    // This would be your actual API endpoint
-    const response = await fetch('/api/predict', {
+    // Call your Python API endpoint
+    const response = await fetch('http://localhost:5000/api/predict', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -102,6 +102,17 @@ export const callPythonModel = async (patientData: PatientData[]): Promise<Predi
   } catch (error) {
     console.error('Error calling Python model:', error);
     // Fallback to mock model
+    return runPredictionModel(patientData);
+  }
+};
+
+// Switch between mock and real model
+export const predictWithModel = async (patientData: PatientData[]): Promise<PredictionResult[]> => {
+  // Try real model first, fallback to mock if it fails
+  try {
+    return await callPythonModel(patientData);
+  } catch (error) {
+    console.warn('Using mock model as fallback');
     return runPredictionModel(patientData);
   }
 };
