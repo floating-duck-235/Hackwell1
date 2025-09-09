@@ -70,12 +70,4 @@ This project demonstrates how AI can support early detection of health condition
 ## 🤝 Contributing  
 Want to improve the project? Fork it, create a branch, and submit a PR 🚀  
 
----
-
-## 📧 Contact  
-**Santhosh Kumar**  
-- 🌍 Chennai, India  
-- 📩 [santhosh05042006@gmail.com](mailto:santhosh05042006@gmail.com)  
-- 🔗 [LinkedIn](www.linkedin.com/in/santhoshkumar546)  
-- 💻 [GitHub](https://github.com/santhoshici)  
 
