@@ -1,20 +1,31 @@
 import React, { useState } from 'react';
-import { Brain, FileText, TrendingUp, Shield } from 'lucide-react';
+import { Brain, FileText, TrendingUp, Shield, Terminal } from 'lucide-react';
 import { FileUploader } from './components/FileUploader';
 import { ResultsDisplay } from './components/ResultsDisplay';
 import { LoadingSpinner } from './components/LoadingSpinner';
 import { parseCSV, downloadCSV, PatientData } from './utils/csvParser';
-import { predictWithModel, PredictionResult } from './services/modelService';
+import { predictWithModel, PredictionResult, setStatusCallback, ModelStatus } from './services/modelService';
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [results, setResults] = useState<PredictionResult[] | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [modelStatus, setModelStatus] = useState<ModelStatus | null>(null);
+  const [showLogs, setShowLogs] = useState(false);
+
+  // Set up status callback
+  React.useEffect(() => {
+    setStatusCallback((status: ModelStatus) => {
+      setModelStatus(status);
+    });
+  }, []);
 
   const handleFileUpload = async (file: File) => {
     setIsLoading(true);
     setError(null);
     setResults(null);
+    setModelStatus(null);
+    setShowLogs(true);
 
     try {
       const text = await file.text();
@@ -150,7 +161,31 @@ function App() {
 
         {isLoading && (
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-            <LoadingSpinner message="Running AI model on your patient data..." />
+            <LoadingSpinner 
+              message={modelStatus?.currentStep || "Running AI model on your patient data..."} 
+              status={modelStatus?.error ? 'error' : modelStatus?.isProcessing === false ? 'success' : 'processing'}
+              logs={modelStatus?.logs || []}
+            />
+            
+            {/* Progress Bar */}
+            {modelStatus && (
+              <div className="mt-6">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-sm font-medium text-gray-700">
+                    {modelStatus.currentStep}
+                  </span>
+                  <span className="text-sm text-gray-500">
+                    {modelStatus.progress}%
+                  </span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div 
+                    className="bg-blue-600 h-2 rounded-full transition-all duration-300 ease-out"
+                    style={{ width: `${modelStatus.progress}%` }}
+                  />
+                </div>
+              </div>
+            )}
           </div>
         )}
 
@@ -175,12 +210,44 @@ function App() {
                 onClick={() => {
                   setResults(null);
                   setError(null);
+                  setModelStatus(null);
+                  setShowLogs(false);
                 }}
                 className="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200 font-medium"
               >
                 Upload New Data
               </button>
             </div>
+          </div>
+        )}
+
+        {/* Debug Panel */}
+        {(modelStatus?.logs.length || 0) > 0 && !isLoading && (
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center space-x-2">
+                <Terminal className="w-5 h-5 text-gray-600" />
+                <h3 className="text-lg font-semibold text-gray-900">Processing Log</h3>
+              </div>
+              <button
+                onClick={() => setShowLogs(!showLogs)}
+                className="text-sm text-blue-600 hover:text-blue-700"
+              >
+                {showLogs ? 'Hide' : 'Show'} Details
+              </button>
+            </div>
+            
+            {showLogs && (
+              <div className="bg-gray-900 rounded-lg p-4 max-h-60 overflow-y-auto">
+                <div className="space-y-1">
+                  {modelStatus?.logs.map((log, index) => (
+                    <div key={index} className="text-gray-300 text-sm font-mono">
+                      <span className="text-gray-500">[{index + 1}]</span> {log}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         )}
       </main>
