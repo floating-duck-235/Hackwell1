@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "repository": "floating-duck-235/Hackwell1",
   "branch": "repoheal.meta",
   "created_at": "2026-06-20T10:37:55.547082+00:00",
@@ -8,10 +8,35 @@
   "last_analysis": null,
   "last_health_refresh": null,
   "last_commit_analyzed": null,
-  "latest_analysis": null,
+  "latest_analysis": "repoheal.meta/analyses/main/0f8a8b9/analysis_main_0f8a8b9_20260620T104232.json",
   "latest_report": null,
   "latest_migration": null,
-  "analyses": {},
-  "health_reports": {},
-  "comparisons": []
+  "analyses": [
+    {
+      "analysis_id": "main_0f8a8b9_20260620T104232",
+      "snapshot_id": "floating-duck-235_Hackwell1_main_0f8a8b9",
+      "branch": "main",
+      "commit": "0f8a8b9c10df1bdd15b62b69f5e47af416c78686",
+      "timestamp": "2026-06-20T10:42:32.456685+00:00",
+      "path": "repoheal.meta/analyses/main/0f8a8b9/analysis_main_0f8a8b9_20260620T104232.json"
+    }
+  ],
+  "health_reports": [],
+  "comparisons": [],
+  "migration_reports": [],
+  "default_branch": "main",
+  "current_head": "0f8a8b9c10df1bdd15b62b69f5e47af416c78686",
+  "last_analyzed_commit": "0f8a8b9c10df1bdd15b62b69f5e47af416c78686",
+  "latest_analysis_id": "main_0f8a8b9_20260620T104232",
+  "latest_analysis_at": "2026-06-20T10:42:32.456685+00:00",
+  "latest_files": {
+    "analysis": "repoheal.meta/snapshots/latest_analysis.json",
+    "analysis_record": "repoheal.meta/analyses/main/0f8a8b9/analysis_main_0f8a8b9_20260620T104232.json",
+    "graph": "repoheal.meta/snapshots/latest_graph.json",
+    "graph_snapshot": "repoheal.meta/analyses/main/0f8a8b9/dependency_graph_main_0f8a8b9_20260620T104232.json",
+    "packages": "repoheal.meta/snapshots/latest_packages.json",
+    "imports": "repoheal.meta/snapshots/latest_imports.json",
+    "dependency_risk_report": "repoheal.meta/reports/dependency_risk_report.json"
+  },
+  "pull_requests": []
 }

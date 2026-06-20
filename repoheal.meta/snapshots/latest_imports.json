@@ -1,0 +1,2463 @@
+{
+  "files": {
+    "api/predict.py": {
+      "direct": [
+        "sys",
+        "os",
+        "json",
+        "pandas",
+        "joblib"
+      ],
+      "from": [
+        "flask",
+        "flask_cors"
+      ],
+      "normalized": [
+        "sys",
+        "os",
+        "json",
+        "pandas",
+        "joblib",
+        "flask",
+        "flask-cors"
+      ],
+      "external": [],
+      "local": [],
+      "hierarchical": [
+        {
+          "source": "import",
+          "module": "sys",
+          "symbol": null,
+          "alias": null,
+          "root": "sys",
+          "is_local": false,
+          "module_path": "sys",
+          "leaf_path": "sys",
+          "nodes": [
+            {
+              "path": "sys",
+              "label": "sys",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            }
+          ]
+        },
+        {
+          "source": "import",
+          "module": "os",
+          "symbol": null,
+          "alias": null,
+          "root": "os",
+          "is_local": false,
+          "module_path": "os",
+          "leaf_path": "os",
+          "nodes": [
+            {
+              "path": "os",
+              "label": "os",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            }
+          ]
+        },
+        {
+          "source": "import",
+          "module": "json",
+          "symbol": null,
+          "alias": null,
+          "root": "json",
+          "is_local": false,
+          "module_path": "json",
+          "leaf_path": "json",
+          "nodes": [
+            {
+              "path": "json",
+              "label": "json",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            }
+          ]
+        },
+        {
+          "source": "import",
+          "module": "pandas",
+          "symbol": null,
+          "alias": "pd",
+          "root": "pandas",
+          "is_local": false,
+          "module_path": "pandas",
+          "leaf_path": "pandas",
+          "nodes": [
+            {
+              "path": "pandas",
+              "label": "pandas",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            }
+          ]
+        },
+        {
+          "source": "import",
+          "module": "joblib",
+          "symbol": null,
+          "alias": null,
+          "root": "joblib",
+          "is_local": false,
+          "module_path": "joblib",
+          "leaf_path": "joblib",
+          "nodes": [
+            {
+              "path": "joblib",
+              "label": "joblib",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "flask",
+          "symbol": "Flask",
+          "alias": null,
+          "root": "flask",
+          "is_local": false,
+          "module_path": "flask",
+          "leaf_path": "flask.Flask",
+          "nodes": [
+            {
+              "path": "flask",
+              "label": "flask",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "flask.Flask",
+              "label": "Flask",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "flask",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "flask",
+          "symbol": "request",
+          "alias": null,
+          "root": "flask",
+          "is_local": false,
+          "module_path": "flask",
+          "leaf_path": "flask.request",
+          "nodes": [
+            {
+              "path": "flask",
+              "label": "flask",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "flask.request",
+              "label": "request",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "flask",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "flask",
+          "symbol": "jsonify",
+          "alias": null,
+          "root": "flask",
+          "is_local": false,
+          "module_path": "flask",
+          "leaf_path": "flask.jsonify",
+          "nodes": [
+            {
+              "path": "flask",
+              "label": "flask",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "flask.jsonify",
+              "label": "jsonify",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "flask",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "flask_cors",
+          "symbol": "CORS",
+          "alias": null,
+          "root": "flask_cors",
+          "is_local": false,
+          "module_path": "flask_cors",
+          "leaf_path": "flask_cors.CORS",
+          "nodes": [
+            {
+              "path": "flask_cors",
+              "label": "flask_cors",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "flask_cors.CORS",
+              "label": "CORS",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "flask_cors",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "sys.path",
+          "symbol": "append",
+          "alias": null,
+          "root": "sys",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "sys.path",
+          "leaf_path": "sys.path.append",
+          "nodes": [
+            {
+              "path": "sys",
+              "label": "sys",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "sys.path",
+              "label": "path",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "sys",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "sys.path.append",
+              "label": "append",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "sys.path",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "os.path",
+          "symbol": "join",
+          "alias": null,
+          "root": "os",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "os.path",
+          "leaf_path": "os.path.join",
+          "nodes": [
+            {
+              "path": "os",
+              "label": "os",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "os.path",
+              "label": "path",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "os",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "os.path.join",
+              "label": "join",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "os.path",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "flask",
+          "symbol": "route",
+          "alias": null,
+          "root": "flask",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "flask",
+          "leaf_path": "flask.route",
+          "nodes": [
+            {
+              "path": "flask",
+              "label": "flask",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "flask.route",
+              "label": "route",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "flask",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "os.path",
+          "symbol": "dirname",
+          "alias": null,
+          "root": "os",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "os.path",
+          "leaf_path": "os.path.dirname",
+          "nodes": [
+            {
+              "path": "os",
+              "label": "os",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "os.path",
+              "label": "path",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "os",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "os.path.dirname",
+              "label": "dirname",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "os.path",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "joblib",
+          "symbol": "load",
+          "alias": null,
+          "root": "joblib",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "joblib",
+          "leaf_path": "joblib.load",
+          "nodes": [
+            {
+              "path": "joblib",
+              "label": "joblib",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "joblib.load",
+              "label": "load",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "joblib",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "flask",
+          "symbol": "run",
+          "alias": null,
+          "root": "flask",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "flask",
+          "leaf_path": "flask.run",
+          "nodes": [
+            {
+              "path": "flask",
+              "label": "flask",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "flask.run",
+              "label": "run",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "flask",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "flask.request",
+          "symbol": "get_json",
+          "alias": null,
+          "root": "flask",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "flask.request",
+          "leaf_path": "flask.request.get_json",
+          "nodes": [
+            {
+              "path": "flask",
+              "label": "flask",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "flask.request",
+              "label": "request",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "flask",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "flask.request.get_json",
+              "label": "get_json",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "flask.request",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "flask",
+          "symbol": "get",
+          "alias": null,
+          "root": "flask",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "flask",
+          "leaf_path": "flask.get",
+          "nodes": [
+            {
+              "path": "flask",
+              "label": "flask",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "flask.get",
+              "label": "get",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "flask",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "pandas",
+          "symbol": "DataFrame",
+          "alias": null,
+          "root": "pandas",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "pandas",
+          "leaf_path": "pandas.DataFrame",
+          "nodes": [
+            {
+              "path": "pandas",
+              "label": "pandas",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "pandas.DataFrame",
+              "label": "DataFrame",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "pandas",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "pandas.astype",
+          "symbol": "map",
+          "alias": null,
+          "root": "pandas",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "pandas.astype",
+          "leaf_path": "pandas.astype.map",
+          "nodes": [
+            {
+              "path": "pandas",
+              "label": "pandas",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "pandas.astype",
+              "label": "astype",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "pandas",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "pandas.astype.map",
+              "label": "map",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "pandas.astype",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "data",
+          "symbol": "get",
+          "alias": null,
+          "root": "data",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "data",
+          "leaf_path": "data.get",
+          "nodes": [
+            {
+              "path": "data",
+              "label": "data",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "data.get",
+              "label": "get",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "data",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "pandas",
+          "symbol": "astype",
+          "alias": null,
+          "root": "pandas",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "pandas",
+          "leaf_path": "pandas.astype",
+          "nodes": [
+            {
+              "path": "pandas",
+              "label": "pandas",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "pandas.astype",
+              "label": "astype",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "pandas",
+              "relationship": "EXPOSES"
+            }
+          ]
+        }
+      ]
+    },
+    "server/code.py": {
+      "direct": [
+        "pandas",
+        "numpy",
+        "random",
+        "warnings",
+        "joblib",
+        "matplotlib.pyplot",
+        "seaborn"
+      ],
+      "from": [
+        "datetime",
+        "sklearn.model_selection",
+        "sklearn.preprocessing",
+        "sklearn.ensemble",
+        "sklearn.linear_model",
+        "sklearn.svm",
+        "sklearn.metrics"
+      ],
+      "normalized": [
+        "pandas",
+        "numpy",
+        "datetime",
+        "random",
+        "warnings",
+        "scikit-learn",
+        "joblib",
+        "matplotlib",
+        "seaborn"
+      ],
+      "external": [],
+      "local": [],
+      "hierarchical": [
+        {
+          "source": "import",
+          "module": "pandas",
+          "symbol": null,
+          "alias": "pd",
+          "root": "pandas",
+          "is_local": false,
+          "module_path": "pandas",
+          "leaf_path": "pandas",
+          "nodes": [
+            {
+              "path": "pandas",
+              "label": "pandas",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            }
+          ]
+        },
+        {
+          "source": "import",
+          "module": "numpy",
+          "symbol": null,
+          "alias": "np",
+          "root": "numpy",
+          "is_local": false,
+          "module_path": "numpy",
+          "leaf_path": "numpy",
+          "nodes": [
+            {
+              "path": "numpy",
+              "label": "numpy",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "datetime",
+          "symbol": "datetime",
+          "alias": null,
+          "root": "datetime",
+          "is_local": false,
+          "module_path": "datetime",
+          "leaf_path": "datetime.datetime",
+          "nodes": [
+            {
+              "path": "datetime",
+              "label": "datetime",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "datetime.datetime",
+              "label": "datetime",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "datetime",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "datetime",
+          "symbol": "timedelta",
+          "alias": null,
+          "root": "datetime",
+          "is_local": false,
+          "module_path": "datetime",
+          "leaf_path": "datetime.timedelta",
+          "nodes": [
+            {
+              "path": "datetime",
+              "label": "datetime",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "datetime.timedelta",
+              "label": "timedelta",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "datetime",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "import",
+          "module": "random",
+          "symbol": null,
+          "alias": null,
+          "root": "random",
+          "is_local": false,
+          "module_path": "random",
+          "leaf_path": "random",
+          "nodes": [
+            {
+              "path": "random",
+              "label": "random",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            }
+          ]
+        },
+        {
+          "source": "import",
+          "module": "warnings",
+          "symbol": null,
+          "alias": null,
+          "root": "warnings",
+          "is_local": false,
+          "module_path": "warnings",
+          "leaf_path": "warnings",
+          "nodes": [
+            {
+              "path": "warnings",
+              "label": "warnings",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "sklearn.model_selection",
+          "symbol": "train_test_split",
+          "alias": null,
+          "root": "sklearn",
+          "is_local": false,
+          "module_path": "sklearn.model_selection",
+          "leaf_path": "sklearn.model_selection.train_test_split",
+          "nodes": [
+            {
+              "path": "sklearn",
+              "label": "sklearn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "sklearn.model_selection",
+              "label": "model_selection",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "sklearn",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "sklearn.model_selection.train_test_split",
+              "label": "train_test_split",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "sklearn.model_selection",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "sklearn.model_selection",
+          "symbol": "GridSearchCV",
+          "alias": null,
+          "root": "sklearn",
+          "is_local": false,
+          "module_path": "sklearn.model_selection",
+          "leaf_path": "sklearn.model_selection.GridSearchCV",
+          "nodes": [
+            {
+              "path": "sklearn",
+              "label": "sklearn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "sklearn.model_selection",
+              "label": "model_selection",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "sklearn",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "sklearn.model_selection.GridSearchCV",
+              "label": "GridSearchCV",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "sklearn.model_selection",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "sklearn.model_selection",
+          "symbol": "cross_val_score",
+          "alias": null,
+          "root": "sklearn",
+          "is_local": false,
+          "module_path": "sklearn.model_selection",
+          "leaf_path": "sklearn.model_selection.cross_val_score",
+          "nodes": [
+            {
+              "path": "sklearn",
+              "label": "sklearn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "sklearn.model_selection",
+              "label": "model_selection",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "sklearn",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "sklearn.model_selection.cross_val_score",
+              "label": "cross_val_score",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "sklearn.model_selection",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "sklearn.preprocessing",
+          "symbol": "StandardScaler",
+          "alias": null,
+          "root": "sklearn",
+          "is_local": false,
+          "module_path": "sklearn.preprocessing",
+          "leaf_path": "sklearn.preprocessing.StandardScaler",
+          "nodes": [
+            {
+              "path": "sklearn",
+              "label": "sklearn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "sklearn.preprocessing",
+              "label": "preprocessing",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "sklearn",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "sklearn.preprocessing.StandardScaler",
+              "label": "StandardScaler",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "sklearn.preprocessing",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "sklearn.preprocessing",
+          "symbol": "LabelEncoder",
+          "alias": null,
+          "root": "sklearn",
+          "is_local": false,
+          "module_path": "sklearn.preprocessing",
+          "leaf_path": "sklearn.preprocessing.LabelEncoder",
+          "nodes": [
+            {
+              "path": "sklearn",
+              "label": "sklearn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "sklearn.preprocessing",
+              "label": "preprocessing",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "sklearn",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "sklearn.preprocessing.LabelEncoder",
+              "label": "LabelEncoder",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "sklearn.preprocessing",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "sklearn.ensemble",
+          "symbol": "RandomForestClassifier",
+          "alias": null,
+          "root": "sklearn",
+          "is_local": false,
+          "module_path": "sklearn.ensemble",
+          "leaf_path": "sklearn.ensemble.RandomForestClassifier",
+          "nodes": [
+            {
+              "path": "sklearn",
+              "label": "sklearn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "sklearn.ensemble",
+              "label": "ensemble",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "sklearn",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "sklearn.ensemble.RandomForestClassifier",
+              "label": "RandomForestClassifier",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "sklearn.ensemble",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "sklearn.ensemble",
+          "symbol": "GradientBoostingClassifier",
+          "alias": null,
+          "root": "sklearn",
+          "is_local": false,
+          "module_path": "sklearn.ensemble",
+          "leaf_path": "sklearn.ensemble.GradientBoostingClassifier",
+          "nodes": [
+            {
+              "path": "sklearn",
+              "label": "sklearn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "sklearn.ensemble",
+              "label": "ensemble",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "sklearn",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "sklearn.ensemble.GradientBoostingClassifier",
+              "label": "GradientBoostingClassifier",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "sklearn.ensemble",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "sklearn.linear_model",
+          "symbol": "LogisticRegression",
+          "alias": null,
+          "root": "sklearn",
+          "is_local": false,
+          "module_path": "sklearn.linear_model",
+          "leaf_path": "sklearn.linear_model.LogisticRegression",
+          "nodes": [
+            {
+              "path": "sklearn",
+              "label": "sklearn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "sklearn.linear_model",
+              "label": "linear_model",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "sklearn",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "sklearn.linear_model.LogisticRegression",
+              "label": "LogisticRegression",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "sklearn.linear_model",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "sklearn.svm",
+          "symbol": "SVC",
+          "alias": null,
+          "root": "sklearn",
+          "is_local": false,
+          "module_path": "sklearn.svm",
+          "leaf_path": "sklearn.svm.SVC",
+          "nodes": [
+            {
+              "path": "sklearn",
+              "label": "sklearn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "sklearn.svm",
+              "label": "svm",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "sklearn",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "sklearn.svm.SVC",
+              "label": "SVC",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "sklearn.svm",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "sklearn.metrics",
+          "symbol": "classification_report",
+          "alias": null,
+          "root": "sklearn",
+          "is_local": false,
+          "module_path": "sklearn.metrics",
+          "leaf_path": "sklearn.metrics.classification_report",
+          "nodes": [
+            {
+              "path": "sklearn",
+              "label": "sklearn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "sklearn.metrics",
+              "label": "metrics",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "sklearn",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "sklearn.metrics.classification_report",
+              "label": "classification_report",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "sklearn.metrics",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "sklearn.metrics",
+          "symbol": "confusion_matrix",
+          "alias": null,
+          "root": "sklearn",
+          "is_local": false,
+          "module_path": "sklearn.metrics",
+          "leaf_path": "sklearn.metrics.confusion_matrix",
+          "nodes": [
+            {
+              "path": "sklearn",
+              "label": "sklearn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "sklearn.metrics",
+              "label": "metrics",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "sklearn",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "sklearn.metrics.confusion_matrix",
+              "label": "confusion_matrix",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "sklearn.metrics",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "sklearn.metrics",
+          "symbol": "roc_auc_score",
+          "alias": null,
+          "root": "sklearn",
+          "is_local": false,
+          "module_path": "sklearn.metrics",
+          "leaf_path": "sklearn.metrics.roc_auc_score",
+          "nodes": [
+            {
+              "path": "sklearn",
+              "label": "sklearn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "sklearn.metrics",
+              "label": "metrics",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "sklearn",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "sklearn.metrics.roc_auc_score",
+              "label": "roc_auc_score",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "sklearn.metrics",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "sklearn.metrics",
+          "symbol": "roc_curve",
+          "alias": null,
+          "root": "sklearn",
+          "is_local": false,
+          "module_path": "sklearn.metrics",
+          "leaf_path": "sklearn.metrics.roc_curve",
+          "nodes": [
+            {
+              "path": "sklearn",
+              "label": "sklearn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "sklearn.metrics",
+              "label": "metrics",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "sklearn",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "sklearn.metrics.roc_curve",
+              "label": "roc_curve",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "sklearn.metrics",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "sklearn.metrics",
+          "symbol": "accuracy_score",
+          "alias": null,
+          "root": "sklearn",
+          "is_local": false,
+          "module_path": "sklearn.metrics",
+          "leaf_path": "sklearn.metrics.accuracy_score",
+          "nodes": [
+            {
+              "path": "sklearn",
+              "label": "sklearn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "sklearn.metrics",
+              "label": "metrics",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "sklearn",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "sklearn.metrics.accuracy_score",
+              "label": "accuracy_score",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "sklearn.metrics",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "sklearn.metrics",
+          "symbol": "precision_score",
+          "alias": null,
+          "root": "sklearn",
+          "is_local": false,
+          "module_path": "sklearn.metrics",
+          "leaf_path": "sklearn.metrics.precision_score",
+          "nodes": [
+            {
+              "path": "sklearn",
+              "label": "sklearn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "sklearn.metrics",
+              "label": "metrics",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "sklearn",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "sklearn.metrics.precision_score",
+              "label": "precision_score",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "sklearn.metrics",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "sklearn.metrics",
+          "symbol": "recall_score",
+          "alias": null,
+          "root": "sklearn",
+          "is_local": false,
+          "module_path": "sklearn.metrics",
+          "leaf_path": "sklearn.metrics.recall_score",
+          "nodes": [
+            {
+              "path": "sklearn",
+              "label": "sklearn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "sklearn.metrics",
+              "label": "metrics",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "sklearn",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "sklearn.metrics.recall_score",
+              "label": "recall_score",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "sklearn.metrics",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "from",
+          "module": "sklearn.metrics",
+          "symbol": "f1_score",
+          "alias": null,
+          "root": "sklearn",
+          "is_local": false,
+          "module_path": "sklearn.metrics",
+          "leaf_path": "sklearn.metrics.f1_score",
+          "nodes": [
+            {
+              "path": "sklearn",
+              "label": "sklearn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "sklearn.metrics",
+              "label": "metrics",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "sklearn",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "sklearn.metrics.f1_score",
+              "label": "f1_score",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "sklearn.metrics",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "import",
+          "module": "joblib",
+          "symbol": null,
+          "alias": null,
+          "root": "joblib",
+          "is_local": false,
+          "module_path": "joblib",
+          "leaf_path": "joblib",
+          "nodes": [
+            {
+              "path": "joblib",
+              "label": "joblib",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "warnings",
+          "symbol": "filterwarnings",
+          "alias": null,
+          "root": "warnings",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "warnings",
+          "leaf_path": "warnings.filterwarnings",
+          "nodes": [
+            {
+              "path": "warnings",
+              "label": "warnings",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "warnings.filterwarnings",
+              "label": "filterwarnings",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "warnings",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "import",
+          "module": "matplotlib.pyplot",
+          "symbol": null,
+          "alias": "plt",
+          "root": "matplotlib",
+          "is_local": false,
+          "module_path": "matplotlib.pyplot",
+          "leaf_path": "matplotlib.pyplot",
+          "nodes": [
+            {
+              "path": "matplotlib",
+              "label": "matplotlib",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "matplotlib.pyplot",
+              "label": "pyplot",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "matplotlib",
+              "relationship": "CONTAINS"
+            }
+          ]
+        },
+        {
+          "source": "import",
+          "module": "seaborn",
+          "symbol": null,
+          "alias": "sns",
+          "root": "seaborn",
+          "is_local": false,
+          "module_path": "seaborn",
+          "leaf_path": "seaborn",
+          "nodes": [
+            {
+              "path": "seaborn",
+              "label": "seaborn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "numpy.random",
+          "symbol": "seed",
+          "alias": null,
+          "root": "numpy",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "numpy.random",
+          "leaf_path": "numpy.random.seed",
+          "nodes": [
+            {
+              "path": "numpy",
+              "label": "numpy",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "numpy.random",
+              "label": "random",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "numpy",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "numpy.random.seed",
+              "label": "seed",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "numpy.random",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "random",
+          "symbol": "seed",
+          "alias": null,
+          "root": "random",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "random",
+          "leaf_path": "random.seed",
+          "nodes": [
+            {
+              "path": "random",
+              "label": "random",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "random.seed",
+              "label": "seed",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "random",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "numpy.random.normal",
+          "symbol": "astype",
+          "alias": null,
+          "root": "numpy",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "numpy.random.normal",
+          "leaf_path": "numpy.random.normal.astype",
+          "nodes": [
+            {
+              "path": "numpy",
+              "label": "numpy",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "numpy.random",
+              "label": "random",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "numpy",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "numpy.random.normal",
+              "label": "normal",
+              "kind": "Module",
+              "depth": 2,
+              "parent_path": "numpy.random",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "numpy.random.normal.astype",
+              "label": "astype",
+              "kind": "Symbol",
+              "depth": 3,
+              "parent_path": "numpy.random.normal",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "numpy",
+          "symbol": "clip",
+          "alias": null,
+          "root": "numpy",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "numpy",
+          "leaf_path": "numpy.clip",
+          "nodes": [
+            {
+              "path": "numpy",
+              "label": "numpy",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "numpy.clip",
+              "label": "clip",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "numpy",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "numpy.random",
+          "symbol": "choice",
+          "alias": null,
+          "root": "numpy",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "numpy.random",
+          "leaf_path": "numpy.random.choice",
+          "nodes": [
+            {
+              "path": "numpy",
+              "label": "numpy",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "numpy.random",
+              "label": "random",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "numpy",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "numpy.random.choice",
+              "label": "choice",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "numpy.random",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "numpy.random",
+          "symbol": "normal",
+          "alias": null,
+          "root": "numpy",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "numpy.random",
+          "leaf_path": "numpy.random.normal",
+          "nodes": [
+            {
+              "path": "numpy",
+              "label": "numpy",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "numpy.random",
+              "label": "random",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "numpy",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "numpy.random.normal",
+              "label": "normal",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "numpy.random",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "numpy.random",
+          "symbol": "poisson",
+          "alias": null,
+          "root": "numpy",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "numpy.random",
+          "leaf_path": "numpy.random.poisson",
+          "nodes": [
+            {
+              "path": "numpy",
+              "label": "numpy",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "numpy.random",
+              "label": "random",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "numpy",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "numpy.random.poisson",
+              "label": "poisson",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "numpy.random",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "numpy.random",
+          "symbol": "uniform",
+          "alias": null,
+          "root": "numpy",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "numpy.random",
+          "leaf_path": "numpy.random.uniform",
+          "nodes": [
+            {
+              "path": "numpy",
+              "label": "numpy",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "numpy.random",
+              "label": "random",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "numpy",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "numpy.random.uniform",
+              "label": "uniform",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "numpy.random",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "numpy.random",
+          "symbol": "binomial",
+          "alias": null,
+          "root": "numpy",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "numpy.random",
+          "leaf_path": "numpy.random.binomial",
+          "nodes": [
+            {
+              "path": "numpy",
+              "label": "numpy",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "numpy.random",
+              "label": "random",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "numpy",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "numpy.random.binomial",
+              "label": "binomial",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "numpy.random",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "numpy",
+          "symbol": "maximum",
+          "alias": null,
+          "root": "numpy",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "numpy",
+          "leaf_path": "numpy.maximum",
+          "nodes": [
+            {
+              "path": "numpy",
+              "label": "numpy",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "numpy.maximum",
+              "label": "maximum",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "numpy",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "numpy.random",
+          "symbol": "beta",
+          "alias": null,
+          "root": "numpy",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "numpy.random",
+          "leaf_path": "numpy.random.beta",
+          "nodes": [
+            {
+              "path": "numpy",
+              "label": "numpy",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "numpy.random",
+              "label": "random",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "numpy",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "numpy.random.beta",
+              "label": "beta",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "numpy.random",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "numpy.random",
+          "symbol": "exponential",
+          "alias": null,
+          "root": "numpy",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "numpy.random",
+          "leaf_path": "numpy.random.exponential",
+          "nodes": [
+            {
+              "path": "numpy",
+              "label": "numpy",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "numpy.random",
+              "label": "random",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "numpy",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "numpy.random.exponential",
+              "label": "exponential",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "numpy.random",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "numpy",
+          "symbol": "where",
+          "alias": null,
+          "root": "numpy",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "numpy",
+          "leaf_path": "numpy.where",
+          "nodes": [
+            {
+              "path": "numpy",
+              "label": "numpy",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "numpy.where",
+              "label": "where",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "numpy",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "pandas",
+          "symbol": "DataFrame",
+          "alias": null,
+          "root": "pandas",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "pandas",
+          "leaf_path": "pandas.DataFrame",
+          "nodes": [
+            {
+              "path": "pandas",
+              "label": "pandas",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "pandas.DataFrame",
+              "label": "DataFrame",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "pandas",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "pandas",
+          "symbol": "copy",
+          "alias": null,
+          "root": "pandas",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "pandas",
+          "leaf_path": "pandas.copy",
+          "nodes": [
+            {
+              "path": "pandas",
+              "label": "pandas",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "pandas.copy",
+              "label": "copy",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "pandas",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "pandas",
+          "symbol": "to_datetime",
+          "alias": null,
+          "root": "pandas",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "pandas",
+          "leaf_path": "pandas.to_datetime",
+          "nodes": [
+            {
+              "path": "pandas",
+              "label": "pandas",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "pandas.to_datetime",
+              "label": "to_datetime",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "pandas",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "joblib",
+          "symbol": "dump",
+          "alias": null,
+          "root": "joblib",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "joblib",
+          "leaf_path": "joblib.dump",
+          "nodes": [
+            {
+              "path": "joblib",
+              "label": "joblib",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "joblib.dump",
+              "label": "dump",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "joblib",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "joblib",
+          "symbol": "load",
+          "alias": null,
+          "root": "joblib",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "joblib",
+          "leaf_path": "joblib.load",
+          "nodes": [
+            {
+              "path": "joblib",
+              "label": "joblib",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "joblib.load",
+              "label": "load",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "joblib",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "df",
+          "symbol": "drop",
+          "alias": null,
+          "root": "df",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "df",
+          "leaf_path": "df.drop",
+          "nodes": [
+            {
+              "path": "df",
+              "label": "df",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "df.drop",
+              "label": "drop",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "df",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "predictor",
+          "symbol": "items",
+          "alias": null,
+          "root": "predictor",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "predictor",
+          "leaf_path": "predictor.items",
+          "nodes": [
+            {
+              "path": "predictor",
+              "label": "predictor",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "predictor.items",
+              "label": "items",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "predictor",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "pandas.DataFrame",
+          "symbol": "sort_values",
+          "alias": null,
+          "root": "pandas",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "pandas.DataFrame",
+          "leaf_path": "pandas.DataFrame.sort_values",
+          "nodes": [
+            {
+              "path": "pandas",
+              "label": "pandas",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "pandas.DataFrame",
+              "label": "DataFrame",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "pandas",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "pandas.DataFrame.sort_values",
+              "label": "sort_values",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "pandas.DataFrame",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "pandas",
+          "symbol": "head",
+          "alias": null,
+          "root": "pandas",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "pandas",
+          "leaf_path": "pandas.head",
+          "nodes": [
+            {
+              "path": "pandas",
+              "label": "pandas",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "pandas.head",
+              "label": "head",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "pandas",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "pandas",
+          "symbol": "to_string",
+          "alias": null,
+          "root": "pandas",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "pandas",
+          "leaf_path": "pandas.to_string",
+          "nodes": [
+            {
+              "path": "pandas",
+              "label": "pandas",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "pandas.to_string",
+              "label": "to_string",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "pandas",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "numpy",
+          "symbol": "exp",
+          "alias": null,
+          "root": "numpy",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "numpy",
+          "leaf_path": "numpy.exp",
+          "nodes": [
+            {
+              "path": "numpy",
+              "label": "numpy",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "numpy.exp",
+              "label": "exp",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "numpy",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "numpy",
+          "symbol": "round",
+          "alias": null,
+          "root": "numpy",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "numpy",
+          "leaf_path": "numpy.round",
+          "nodes": [
+            {
+              "path": "numpy",
+              "label": "numpy",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "numpy.round",
+              "label": "round",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "numpy",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "numpy.round",
+          "symbol": "astype",
+          "alias": null,
+          "root": "numpy",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "numpy.round",
+          "leaf_path": "numpy.round.astype",
+          "nodes": [
+            {
+              "path": "numpy",
+              "label": "numpy",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "numpy.round",
+              "label": "round",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "numpy",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "numpy.round.astype",
+              "label": "astype",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "numpy.round",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "scikit-learn",
+          "symbol": "fit_transform",
+          "alias": null,
+          "root": "scikit-learn",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "scikit-learn",
+          "leaf_path": "scikit-learn.fit_transform",
+          "nodes": [
+            {
+              "path": "scikit-learn",
+              "label": "scikit-learn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "scikit-learn.fit_transform",
+              "label": "fit_transform",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "scikit-learn",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "data.columns",
+          "symbol": "tolist",
+          "alias": null,
+          "root": "data",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "data.columns",
+          "leaf_path": "data.columns.tolist",
+          "nodes": [
+            {
+              "path": "data",
+              "label": "data",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "data.columns",
+              "label": "columns",
+              "kind": "Module",
+              "depth": 1,
+              "parent_path": "data",
+              "relationship": "CONTAINS"
+            },
+            {
+              "path": "data.columns.tolist",
+              "label": "tolist",
+              "kind": "Symbol",
+              "depth": 2,
+              "parent_path": "data.columns",
+              "relationship": "EXPOSES"
+            }
+          ]
+        },
+        {
+          "source": "attribute",
+          "module": "scikit-learn",
+          "symbol": "fit",
+          "alias": null,
+          "root": "scikit-learn",
+          "is_local": false,
+          "inferred": true,
+          "module_path": "scikit-learn",
+          "leaf_path": "scikit-learn.fit",
+          "nodes": [
+            {
+              "path": "scikit-learn",
+              "label": "scikit-learn",
+              "kind": "Package",
+              "depth": 0,
+              "parent_path": null,
+              "relationship": null
+            },
+            {
+              "path": "scikit-learn.fit",
+              "label": "fit",
+              "kind": "Symbol",
+              "depth": 1,
+              "parent_path": "scikit-learn",
+              "relationship": "EXPOSES"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "summary": {
+    "total_files": 2,
+    "total_python_files": 2,
+    "total_notebooks": 0,
+    "total_imports": 14,
+    "total_local_imports": 0
+  },
+  "analysis_id": "main_0f8a8b9_20260620T104232"
+}

@@ -1,0 +1,122 @@
+{
+  "declared": {
+    "flask": {
+      "version": "2.3.3",
+      "specifier": "==",
+      "source": "requirements.txt"
+    },
+    "flask-cors": {
+      "version": "4.0.0",
+      "specifier": "==",
+      "source": "requirements.txt"
+    },
+    "pandas": {
+      "version": "2.0.3",
+      "specifier": "==",
+      "source": "requirements.txt"
+    },
+    "numpy": {
+      "version": "1.24.3",
+      "specifier": "==",
+      "source": "requirements.txt"
+    },
+    "scikit-learn": {
+      "version": "1.3.0",
+      "specifier": "==",
+      "source": "requirements.txt"
+    },
+    "joblib": {
+      "version": "1.3.2",
+      "specifier": "==",
+      "source": "requirements.txt"
+    }
+  },
+  "count": 6,
+  "packages": {
+    "datetime": {
+      "version": "unknown",
+      "latest_version": "6.0",
+      "type": "detected",
+      "status": "missing"
+    },
+    "flask": {
+      "version": "2.3.3",
+      "latest_version": "3.1.3",
+      "type": "third-party",
+      "status": "declared"
+    },
+    "flask-cors": {
+      "version": "4.0.0",
+      "latest_version": "6.0.5",
+      "type": "third-party",
+      "status": "declared"
+    },
+    "joblib": {
+      "version": "1.3.2",
+      "latest_version": "1.5.3",
+      "type": "third-party",
+      "status": "declared"
+    },
+    "json": {
+      "version": "unknown",
+      "latest_version": "unknown",
+      "type": "detected",
+      "status": "missing"
+    },
+    "matplotlib": {
+      "version": "unknown",
+      "latest_version": "3.11.0",
+      "type": "detected",
+      "status": "missing"
+    },
+    "numpy": {
+      "version": "1.24.3",
+      "latest_version": "2.4.6",
+      "type": "third-party",
+      "status": "declared"
+    },
+    "os": {
+      "version": "unknown",
+      "latest_version": "unknown",
+      "type": "detected",
+      "status": "missing"
+    },
+    "pandas": {
+      "version": "2.0.3",
+      "latest_version": "3.0.3",
+      "type": "third-party",
+      "status": "declared"
+    },
+    "random": {
+      "version": "unknown",
+      "latest_version": "unknown",
+      "type": "detected",
+      "status": "missing"
+    },
+    "scikit-learn": {
+      "version": "1.3.0",
+      "latest_version": "1.9.0",
+      "type": "third-party",
+      "status": "declared"
+    },
+    "seaborn": {
+      "version": "unknown",
+      "latest_version": "0.13.2",
+      "type": "detected",
+      "status": "missing"
+    },
+    "sys": {
+      "version": "unknown",
+      "latest_version": "unknown",
+      "type": "detected",
+      "status": "missing"
+    },
+    "warnings": {
+      "version": "unknown",
+      "latest_version": "unknown",
+      "type": "detected",
+      "status": "missing"
+    }
+  },
+  "analysis_id": "main_0f8a8b9_20260620T104232"
+}
