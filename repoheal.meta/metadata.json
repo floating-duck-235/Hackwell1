@@ -1,0 +1,17 @@
+{
+  "schema_version": 2,
+  "repository": "floating-duck-235/Hackwell1",
+  "branch": "repoheal.meta",
+  "created_at": "2026-06-20T10:37:55.547082+00:00",
+  "status": "active",
+  "artifacts": [],
+  "last_analysis": null,
+  "last_health_refresh": null,
+  "last_commit_analyzed": null,
+  "latest_analysis": null,
+  "latest_report": null,
+  "latest_migration": null,
+  "analyses": {},
+  "health_reports": {},
+  "comparisons": []
+}
