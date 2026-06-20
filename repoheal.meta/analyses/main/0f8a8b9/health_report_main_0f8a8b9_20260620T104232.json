@@ -1,0 +1,433 @@
+{
+  "migration_id": "mig_main_0f8a8b9_20260620T104232",
+  "analysis_id": "main_0f8a8b9_20260620T104232",
+  "repository_snapshot_id": "floating-duck-235_Hackwell1_main_0f8a8b9",
+  "branch": "main",
+  "generated_from_commit": "0f8a8b9c10df1bdd15b62b69f5e47af416c78686",
+  "generated_at": "2026-06-20T10:54:17.179682+00:00",
+  "health_score": 72,
+  "risk_score": 36,
+  "overall_risk_level": "low",
+  "intelligence_warnings": [
+    "flask: failed",
+    "flask-cors: degraded (budget_exhausted)",
+    "joblib: failed",
+    "pandas: failed",
+    "scikit-learn: failed",
+    "numpy: failed"
+  ],
+  "report": {
+    "repository": "floating-duck-235/Hackwell1",
+    "generated_at": "2026-06-20T10:54:16.022450+00:00",
+    "overall_health_score": 72,
+    "overall_risk_score": 36,
+    "overall_risk_level": "low",
+    "migration_risk_score": 36,
+    "migration_risk_level": "low",
+    "intelligence_warnings": [
+      "flask: failed",
+      "flask-cors: degraded (budget_exhausted)",
+      "joblib: failed",
+      "pandas: failed",
+      "scikit-learn: failed",
+      "numpy: failed"
+    ],
+    "migration_intelligence_status": "degraded",
+    "intelligence_error": "flask: failed",
+    "intelligence_source": "local_kb",
+    "executive_summary": {
+      "overall_health_score": 72,
+      "critical_findings_count": 0,
+      "deprecated_count": 0,
+      "breaking_count": 1
+    },
+    "dependency_inventory": [
+      {
+        "name": "datetime",
+        "installed_version": "unknown",
+        "latest_version": "6.0",
+        "status": "missing",
+        "type": "detected"
+      },
+      {
+        "name": "flask",
+        "installed_version": "2.3.3",
+        "latest_version": "3.1.3",
+        "status": "declared",
+        "type": "third-party"
+      },
+      {
+        "name": "flask-cors",
+        "installed_version": "4.0.0",
+        "latest_version": "6.0.5",
+        "status": "declared",
+        "type": "third-party"
+      },
+      {
+        "name": "joblib",
+        "installed_version": "1.3.2",
+        "latest_version": "1.5.3",
+        "status": "declared",
+        "type": "third-party"
+      },
+      {
+        "name": "json",
+        "installed_version": "unknown",
+        "latest_version": "unknown",
+        "status": "missing",
+        "type": "detected"
+      },
+      {
+        "name": "matplotlib",
+        "installed_version": "unknown",
+        "latest_version": "3.11.0",
+        "status": "missing",
+        "type": "detected"
+      },
+      {
+        "name": "numpy",
+        "installed_version": "1.24.3",
+        "latest_version": "2.4.6",
+        "status": "declared",
+        "type": "third-party"
+      },
+      {
+        "name": "os",
+        "installed_version": "unknown",
+        "latest_version": "unknown",
+        "status": "missing",
+        "type": "detected"
+      },
+      {
+        "name": "pandas",
+        "installed_version": "2.0.3",
+        "latest_version": "3.0.3",
+        "status": "declared",
+        "type": "third-party"
+      },
+      {
+        "name": "random",
+        "installed_version": "unknown",
+        "latest_version": "unknown",
+        "status": "missing",
+        "type": "detected"
+      },
+      {
+        "name": "scikit-learn",
+        "installed_version": "1.3.0",
+        "latest_version": "1.9.0",
+        "status": "declared",
+        "type": "third-party"
+      },
+      {
+        "name": "seaborn",
+        "installed_version": "unknown",
+        "latest_version": "0.13.2",
+        "status": "missing",
+        "type": "detected"
+      },
+      {
+        "name": "sys",
+        "installed_version": "unknown",
+        "latest_version": "unknown",
+        "status": "missing",
+        "type": "detected"
+      },
+      {
+        "name": "warnings",
+        "installed_version": "unknown",
+        "latest_version": "unknown",
+        "status": "missing",
+        "type": "detected"
+      }
+    ],
+    "deprecated_apis": [],
+    "breaking_changes": [
+      {
+        "symbol": "flask@2.3.3 \u2192 3.1.3",
+        "library": "flask",
+        "installed_version": "2.3.3",
+        "latest_version": "3.1.3",
+        "status": "at_risk",
+        "relationships": [
+          {
+            "relation": "major_version_gap",
+            "target": "3.1.3",
+            "status": "at_risk",
+            "confidence": 0.9,
+            "evidence_links": []
+          }
+        ],
+        "version_distance": {
+          "installed": "2.3.3",
+          "deprecated_in": null,
+          "removed_in": null,
+          "latest": "3.1.3",
+          "major_diff": 1,
+          "minor_diff": 1,
+          "patch_diff": 3,
+          "deprecated_major_diff": null,
+          "deprecated_minor_diff": null,
+          "deprecated_patch_diff": null,
+          "removed_major_diff": null,
+          "removed_minor_diff": null,
+          "removed_patch_diff": null
+        },
+        "files_using": [],
+        "functions_using": [],
+        "confidence": null,
+        "intelligence_source": "version_gap"
+      },
+      {
+        "symbol": "flask-cors@4.0.0 \u2192 6.0.5",
+        "library": "flask-cors",
+        "installed_version": "4.0.0",
+        "latest_version": "6.0.5",
+        "status": "breaking",
+        "relationships": [
+          {
+            "relation": "major_version_gap",
+            "target": "6.0.5",
+            "status": "breaking",
+            "confidence": 0.9,
+            "evidence_links": []
+          }
+        ],
+        "version_distance": {
+          "installed": "4.0.0",
+          "deprecated_in": null,
+          "removed_in": null,
+          "latest": "6.0.5",
+          "major_diff": 2,
+          "minor_diff": 0,
+          "patch_diff": 5,
+          "deprecated_major_diff": null,
+          "deprecated_minor_diff": null,
+          "deprecated_patch_diff": null,
+          "removed_major_diff": null,
+          "removed_minor_diff": null,
+          "removed_patch_diff": null
+        },
+        "files_using": [],
+        "functions_using": [],
+        "confidence": null,
+        "intelligence_source": "version_gap"
+      },
+      {
+        "symbol": "pandas@2.0.3 \u2192 3.0.3",
+        "library": "pandas",
+        "installed_version": "2.0.3",
+        "latest_version": "3.0.3",
+        "status": "at_risk",
+        "relationships": [
+          {
+            "relation": "major_version_gap",
+            "target": "3.0.3",
+            "status": "at_risk",
+            "confidence": 0.9,
+            "evidence_links": []
+          }
+        ],
+        "version_distance": {
+          "installed": "2.0.3",
+          "deprecated_in": null,
+          "removed_in": null,
+          "latest": "3.0.3",
+          "major_diff": 1,
+          "minor_diff": 0,
+          "patch_diff": 3,
+          "deprecated_major_diff": null,
+          "deprecated_minor_diff": null,
+          "deprecated_patch_diff": null,
+          "removed_major_diff": null,
+          "removed_minor_diff": null,
+          "removed_patch_diff": null
+        },
+        "files_using": [],
+        "functions_using": [],
+        "confidence": null,
+        "intelligence_source": "version_gap"
+      },
+      {
+        "symbol": "numpy@1.24.3 \u2192 2.4.6",
+        "library": "numpy",
+        "installed_version": "1.24.3",
+        "latest_version": "2.4.6",
+        "status": "at_risk",
+        "relationships": [
+          {
+            "relation": "major_version_gap",
+            "target": "2.4.6",
+            "status": "at_risk",
+            "confidence": 0.9,
+            "evidence_links": []
+          }
+        ],
+        "version_distance": {
+          "installed": "1.24.3",
+          "deprecated_in": null,
+          "removed_in": null,
+          "latest": "2.4.6",
+          "major_diff": 1,
+          "minor_diff": 4,
+          "patch_diff": 6,
+          "deprecated_major_diff": null,
+          "deprecated_minor_diff": null,
+          "deprecated_patch_diff": null,
+          "removed_major_diff": null,
+          "removed_minor_diff": null,
+          "removed_patch_diff": null
+        },
+        "files_using": [],
+        "functions_using": [],
+        "confidence": null,
+        "intelligence_source": "version_gap"
+      }
+    ],
+    "migration_paths": [
+      {
+        "symbol": "flask@2.3.3 \u2192 3.1.3",
+        "target": "3.1.3",
+        "relation": "major_version_gap",
+        "confidence": 0.9
+      },
+      {
+        "symbol": "flask-cors@4.0.0 \u2192 6.0.5",
+        "target": "6.0.5",
+        "relation": "major_version_gap",
+        "confidence": 0.9
+      },
+      {
+        "symbol": "pandas@2.0.3 \u2192 3.0.3",
+        "target": "3.0.3",
+        "relation": "major_version_gap",
+        "confidence": 0.9
+      },
+      {
+        "symbol": "numpy@1.24.3 \u2192 2.4.6",
+        "target": "2.4.6",
+        "relation": "major_version_gap",
+        "confidence": 0.9
+      }
+    ],
+    "impact_reports": [
+      {
+        "symbol": "flask@2.3.3 \u2192 3.1.3",
+        "affected_files": [],
+        "affected_functions": [],
+        "affected_classes": [],
+        "impact_breadth": 0.0,
+        "impact_depth": 0
+      },
+      {
+        "symbol": "flask-cors@4.0.0 \u2192 6.0.5",
+        "affected_files": [],
+        "affected_functions": [],
+        "affected_classes": [],
+        "impact_breadth": 0.0,
+        "impact_depth": 0
+      },
+      {
+        "symbol": "pandas@2.0.3 \u2192 3.0.3",
+        "affected_files": [],
+        "affected_functions": [],
+        "affected_classes": [],
+        "impact_breadth": 0.0,
+        "impact_depth": 0
+      },
+      {
+        "symbol": "numpy@1.24.3 \u2192 2.4.6",
+        "affected_files": [],
+        "affected_functions": [],
+        "affected_classes": [],
+        "impact_breadth": 0.0,
+        "impact_depth": 0
+      }
+    ],
+    "risk_assessment": [
+      {
+        "symbol": "flask@2.3.3 \u2192 3.1.3",
+        "risk_score": 24,
+        "risk_level": "low",
+        "factors": {
+          "affected_file_count": 0,
+          "affected_file_percentage": 0.0,
+          "breaking_severity": "medium",
+          "replacement_confidence": 0.9,
+          "version_distance_score": 43.0,
+          "repo_file_count": 2
+        }
+      },
+      {
+        "symbol": "flask-cors@4.0.0 \u2192 6.0.5",
+        "risk_score": 36,
+        "risk_level": "low",
+        "factors": {
+          "affected_file_count": 0,
+          "affected_file_percentage": 0.0,
+          "breaking_severity": "high",
+          "replacement_confidence": 0.9,
+          "version_distance_score": 66.0,
+          "repo_file_count": 2
+        }
+      },
+      {
+        "symbol": "pandas@2.0.3 \u2192 3.0.3",
+        "risk_score": 23,
+        "risk_level": "low",
+        "factors": {
+          "affected_file_count": 0,
+          "affected_file_percentage": 0.0,
+          "breaking_severity": "medium",
+          "replacement_confidence": 0.9,
+          "version_distance_score": 33.0,
+          "repo_file_count": 2
+        }
+      },
+      {
+        "symbol": "numpy@1.24.3 \u2192 2.4.6",
+        "risk_score": 29,
+        "risk_level": "low",
+        "factors": {
+          "affected_file_count": 0,
+          "affected_file_percentage": 0.0,
+          "breaking_severity": "medium",
+          "replacement_confidence": 0.9,
+          "version_distance_score": 73.0,
+          "repo_file_count": 2
+        }
+      }
+    ],
+    "recommended_actions": [
+      {
+        "symbol": "flask-cors@4.0.0 \u2192 6.0.5",
+        "priority": "medium",
+        "action_type": "migrate_api",
+        "description": "Migrate flask-cors@4.0.0 \u2192 6.0.5 to avoid potential breakage. Impacted files: 0",
+        "confidence": 0.9
+      },
+      {
+        "symbol": "numpy@1.24.3 \u2192 2.4.6",
+        "priority": "medium",
+        "action_type": "migrate_api",
+        "description": "Migrate numpy@1.24.3 \u2192 2.4.6 to avoid potential breakage. Impacted files: 0",
+        "confidence": 0.9
+      },
+      {
+        "symbol": "flask@2.3.3 \u2192 3.1.3",
+        "priority": "medium",
+        "action_type": "migrate_api",
+        "description": "Migrate flask@2.3.3 \u2192 3.1.3 to avoid potential breakage. Impacted files: 0",
+        "confidence": 0.9
+      },
+      {
+        "symbol": "pandas@2.0.3 \u2192 3.0.3",
+        "priority": "medium",
+        "action_type": "migrate_api",
+        "description": "Migrate pandas@2.0.3 \u2192 3.0.3 to avoid potential breakage. Impacted files: 0",
+        "confidence": 0.9
+      }
+    ],
+    "compatibility_shims": ""
+  }
+}
